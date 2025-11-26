@@ -1,0 +1,21 @@
+----Firebase
+
+
+*first step is to connect firebase with javascript
+
+--conectting firebase
+
+
+*click add app and choose web
+*provide project name and copy the code and make a new javascript file lik it with html and paste the code in firebase.js file
+*this code basically initialize/connect javascript with firebase
+
+--important
+
+*always keep script tag of firebase before(up) the app.js file
+
+
+
+
+
+
