@@ -6,7 +6,8 @@ import {
     getAuth,
     createUserWithEmailAndPassword,
     onAuthStateChanged,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    signOut
 
 
 } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
@@ -27,4 +28,4 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 
-export { auth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword }
+export { auth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword,signOut  }

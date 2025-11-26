@@ -1,4 +1,4 @@
-import { auth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword,  } from "./firebase.js";
+import { auth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "./firebase.js";
 
 
 /// state change listener
@@ -43,6 +43,27 @@ let signupBtn = document.getElementById("signup");
 signupBtn.addEventListener('click', signup)
 
 
+// signout method
 
+let signout = ()=>{
+
+    signOut(auth).then(() => {
+        console.log("signout sucessfully")
+        // Sign-out successful.
+    }).catch((error) => {
+        // An error happened.
+    });
+
+
+}
+
+
+
+
+
+
+let signoutBtn = document.getElementById("signoutBtn");
+
+signoutBtn.addEventListener('click', signout)
 
 
