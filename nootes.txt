@@ -15,6 +15,62 @@
 *always keep script tag of firebase before(up) the app.js file
 
 
+---authentications
+
+
+*for authentication import getAuth method of firebase through cdn
+*cdn can simply be made by copying initializeApp method cdn 
+and then replacing getAuth with initializeApp method and also replaceing cdn with only  from 'firebase-app' to 'firebase-auth'  
+
+*then pass the app top to getAuth method
+
+*we then similarly import   createUserWithEmailAndPassword with auth as its part of auth no need of another cdn
+
+
+---Authentication :importing them in app.js
+
+
+*we import getAuth and createUserWithEmailAndPassword in app .js
+
+
+*we create a function called signup and paste the code hte firebase give in docs for authenticaation
+
+*within the code given email and password reuqired which we need to get from the user
+
+
+
+
+
+
+(-----important-----)
+
+*in module javascript function declared in glov=bal acope are not  acessible everywhere in project 
+
+*like signup method is not acessible in inex.html
+
+*so we cannot us event onClick on signupform to call the signup method with it as it is not acessible in index.html
+
+* so will use addEventListener method with click event 
+
+(-----important-----)
+
+*in firebase project we have service providers we need to select 
+the email/password provider
+
+*initially there will be no user data under users tab
+
+*so when email and is is given by user the information is then sent to firebase under "users" tab
+
+
+
+*among the user data there is   uID which is userID 
+
+*acessToken is very important
+*acessToken is in hash and has information about user which is hidden
+
+*acessToken is very activity sensitibv=e and get you logout
+with in seconds use in banking apps
+
 
 
 

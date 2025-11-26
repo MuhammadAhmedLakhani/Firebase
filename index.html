@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Firebase</h1>
-    <h6>Authentication</h6>
+    <div>
+        <h2>Signup</h2>
+        <label for="">
+            Email
+            <br />
+            <input type="text" id="email">
+        </label>
+        <br>
+        <label for="">
+            Password
+            <br />
+            <input type="password" id="password">
+        </label>
+        <br>
+        <button id="signup" >Signup</button>
+
+            <br>
+
+        <button id="signoutBtn">SignOut</button>
+
+    </div>
 
     <script src="firebase.js" type="module"></script>
     <script src="app.js" type="module"></script>
 </body>
+
 </html>
