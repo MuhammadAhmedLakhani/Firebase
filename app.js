@@ -1,4 +1,4 @@
-import { auth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "./firebase.js";
+import { auth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, sendEmailVerification } from "./firebase.js";
 
 
 /// state change listener
@@ -45,7 +45,7 @@ signupBtn.addEventListener('click', signup)
 
 // signout method
 
-let signout = ()=>{
+let signout = () => {
 
     signOut(auth).then(() => {
         console.log("signout sucessfully")
@@ -60,10 +60,36 @@ let signout = ()=>{
 
 
 
-
+// gettingElements with button pressed 
 
 let signoutBtn = document.getElementById("signoutBtn");
 
 signoutBtn.addEventListener('click', signout)
+
+
+//Email Verification
+
+let emailVerify = ()=>{
+
+    sendEmailVerification(auth.currentUser)
+        .then(() => {
+            // Email verification sent!
+            console.log("sent")
+            // ...
+        });
+
+
+}
+
+
+
+
+let emailVerification = document.getElementById("emailVerification");
+
+emailVerification.addEventListener('click', emailVerify)
+
+
+
+
 
 
